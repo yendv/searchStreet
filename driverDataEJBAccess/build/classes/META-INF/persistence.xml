@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="driverDataAccessClient" 
+				transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<!-- Comment -->
+		
+		<!-- YENDV -->
+		<!-- <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider> -->
+		<!-- <class>com.cefn.filesystem.impl.FilesystemImpl</class>
+		<class>com.cefn.filesystem.impl.FolderImpl</class>
+		<class>com.cefn.filesystem.impl.FileImpl</class>
+		<class>com.cefn.filesystem.impl.LocatableImpl</class> -->
+		<!-- End YenDV -->
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		
+		<!-- <persistence-unit name="idsDataAccessClient" -->
+		<!-- transaction-type="JTA"> -->
+		<!-- <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> -->
+		<!-- <jta-data-source>idsDB</jta-data-source> -->
+		<!-- <exclude-unlisted-classes>false</exclude-unlisted-classes> -->
+		
+		<properties>
+			<property name="javax.persistence.jdbc.Driver" value="oracle.jdbc.Driver" />
+			<!-- <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@192.168.1.96:1521/idsdb.ssc.gov.vn" />  -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@192.168.55.32:1521/DRIVERDB" />
+			<property name="javax.persistence.jdbc.user" value="DRIVERDB" />
+			<property name="javax.persistence.jdbc.password" value="12345678" /> 
+			<property name="javax.persistence.query.timeout" value="2000"/>
+
+			<!-- YenDV -->
+			<!-- <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@192.168.55.32:1521/orcl" />
+			<property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver" /> 
+			<property name="javax.persistence.jdbc.user" value="idstest" />
+			<property name="javax.persistence.jdbc.password" value="ids" />
+			<property name="openjpa.Log" value="DefaultLevel=WARN, Tool=INFO" />
+			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema" /> -->
+			<!--End YenDV -->
+		</properties>
+		<!-- <properties> -->
+		<!-- <property name="eclipselink.target-server" value="WebLogic_12c"/> -->
+		<!-- <property name="javax.persistence.jtaDataSource" -->
+		<!-- value="idsDB"/> -->
+		<!-- <property name="eclipselink.cache.shared.default" value="false"/> -->
+		<!-- <property name="eclipselink.logging.parameters" value="false"/> -->
+		<!-- </properties> -->
+	</persistence-unit>
+</persistence>
+

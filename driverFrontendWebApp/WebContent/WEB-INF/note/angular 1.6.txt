@@ -1,0 +1,7 @@
+Angular 1.6:
+- controller: xử lý các action trên form. Controller thay thế cho modelAttribute và object được định nghĩa trong java. Nó định nghĩa ra các object dạng array json hoặc các trường giá trị json.
+- service: xử lý các tương tác về db bằng webservice.
+Script@
+'use strict': để định nghĩa các biến trong js mới được sử dụng.
+Controller:
+-Hiện tại đang viết hoàn toàn bằng webservice. 
